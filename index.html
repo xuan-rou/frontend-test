@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        ol{
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        li{
+            clear: both;
+        }
+        /* 第一題 */
+        .wrap1{
+            height: 100px;
+            width: 100%;
+            background-color: #999;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .wrap1 .box{
+            background-color: #fff;
+            border:solid 1px #999;
+            width: 50px;
+            height: 20px;
+            text-align: center;
+        }
+        /* 第二題 */
+        .wrap2{
+            background-color: #999;
+            color: #ffffff;
+            width: 100%;
+            display: flex;
+        }
+        .wrap2 .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .wrap2 .box2{
+            background-color: blue;
+            flex-grow: 1;
+        }
+        /* 第三題 */
+        .wrap3{
+            background-color: #999;
+            color: #ffffff;
+
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: calc( 9 / 16 * 100% );
+        }
+        .wrap3 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* 第四題 */
+        .wrap4{
+            background-color: #999;
+            color: #ffffff;
+            width: 100%;
+        }
+        .wrap4::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .wrap4 .box1{
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+        }
+        .wrap4 .box2{
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+        /* 第五題 */
+        .wrap5{
+            background-color: #999;
+            color: #ffffff;
+            width: 100%;
+            overflow: hidden;
+        }
+        .wrap5 .box1{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin-top: 10px;
+        }
+        /* 第六題 */
+        .wrap6{
+            background-color: #999;
+            color: #ffffff;
+            width: 100%;
+            height: 60px;
+            position: relative;
+        }
+        .wrap6 .box1{
+            z-index: 1;
+            position: static;
+        }
+        .wrap6 .box1 .top{
+            z-index: 99999;
+            position: absolute;
+            background-color: red;
+            color: #ffffff;
+            width: 50px;
+            height: 50px;
+        }
+        .wrap6 .box2{
+            z-index: 2;
+            position: absolute;
+            background-color: blue;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+        }
+        /* 第七題 */
+        .wrap7{
+            background-color: #999;
+            color: #ffffff;
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+        .wrap7 .box1{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            right: 100%;
+        }
+        .wrap7 .box2{
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>前端網頁設計師試題</h1>
+    <ol>
+        <li>
+            <h3>請將ＡＢＣＤ區塊左右平均排列並垂直至中</h3>
+            <div class="wrap1">
+                <div class="box">A</div>
+                <div class="box">B</div>
+                <div class="box">C</div>
+                <div class="box">D</div>
+            </div>
+        </li>
+        <li>
+            <h3>當Ａ區塊寬度不固定時，請將Ｂ區塊放在Ａ區塊右側並填滿剩餘灰色空間</h3>
+            <div class="wrap2">
+                <div class="box1">A</div>
+                <div class="box2">B</div>
+            </div>
+        </li>
+        <li>
+            <h3>請將iframe調整為16:9比例且螢幕寬度縮小時可依此比例縮放</h3>
+            <div class="wrap3">
+                <iframe width="100%" src="https://www.youtube.com/embed/0d4nLXIansU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </li>
+        <li>
+            <h3>請解決.wrap4高度消失問題</h3>
+            <div class="wrap4">
+                <div class="box1"></div>
+                <div class="box2"></div>
+            </div>
+        </li>
+        <li>
+            <h3>請解決.wrap5 .box1 的 margin-top: 10px; 失效問題</h3>
+            <div class="wrap5">
+                <div class="box1"></div>
+            </div>
+        </li>
+        <li>
+            <h3>請將.top疊在最上層</h3>
+            <div class="wrap6">
+                <div class="box1">
+                    <div class="top"></div>
+                </div>
+                <div class="box2"></div>
+            </div>
+        </li>
+        <li>
+            <h3>當Ａ區塊寬度不固定時，請將Ａ區塊向左方偏移本身寬度的大小</h3>
+            <div class="wrap7">
+                <div class="box1">A</div>
+            </div>
+        </li>
+    </ol>
+</body>
+</html>
